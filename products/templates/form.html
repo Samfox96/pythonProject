@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Feedback</title>
+
+    <a href="http://127.0.0.1:8000/products/">Home</a>
+    <a href="http://127.0.0.1:8000/products/about">About us</a>
+    <a href="http://127.0.0.1:8000/products/customer">Feedback</a>
+    <a href="http://127.0.0.1:8000/products/future">The Future</a>
+    <a href="http://127.0.0.1:8000/products/weather">Weather</a>
+
+</head>
+<body style="background-color:powderblue;">
+<p>
+  </br>
+  </br>
+  </br>
+
+<form action="post">
+  {% csrf_token %}
+  {{ form}}
+  <button type="submit">Submit</button>
+ </form>
+
+</p>
+</body>
+</html>

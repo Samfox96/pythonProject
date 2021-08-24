@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Weather</title>
+
+    <meta name="author" content="name">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+     <link rel="stylesheet" href="stylesheet.css" type="text/css">
+
+        <a href="http://127.0.0.1:8000/products/">Home</a>
+        <a href="http://127.0.0.1:8000/products/about">About us</a>
+        <a href="http://127.0.0.1:8000/products/customer">Feedback</a>
+        <a href="http://127.0.0.1:8000/products/future">The Future</a>
+        <a href="http://127.0.0.1:8000/">Weather</a>
+
+</head>
+<body style="background-color:powderblue;">
+
+<p>
+<form method="POST"> {% csrf_token %}
+    <input type="text" placeholder="'Enter city" name='city' />
+    <button type='submit'>Enter</button>
+
+</form>
+    <h1> {{description}} </h1>
+    <h1> {{temp}}°C </h1>
+    <h1> {{day}} </h1>
+    <h1> {{city}} </h1>
+    <h1> {{lat}} Latitude </h1>
+    <h1> {{lon}} Longitude </h1>
+    <h1> {{min}}°C Minimum Temperature </h1>
+    <h1> {{max}}°C Maximum Temperature </h1>
+    <h1> {{hum}}% Humidity </h1>
+    <img src='http://openweathermap.org/img/w/{{icon}}.png' width="100px">
+
+</p>
+
+
+</body>
+</html>
